@@ -1,17 +1,26 @@
 {
   "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "name": "imc-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "backend": "cd backend && pnpm run start",
+    "frontend": "cd frontend && pnpm run dev",
+    "start": "dotenv -e .env -- npm-run-all -p -r backend frontend"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.48.0",
-    "prettier": "^3.0.3",
-    "tsconfig": "workspace:*",
-    "turbo": "latest"
+    "@changesets/changelog-github": "^0.4.8",
+    "@changesets/cli": "^2.26.2",
+    "npm-run-all": "^4.1.5"
   },
-  "packageManager": "pnpm@8.6.10",
-  "name": "imc-website"
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
 }
