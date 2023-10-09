@@ -22,7 +22,7 @@ importers:
         specifier: ^4.1.5
         version: 4.1.5
 
-  backend:
+  apps/backend:
     dependencies:
       '@nestjs/common':
         specifier: ^10.0.0
@@ -128,7 +128,7 @@ importers:
         specifier: ^5.1.3
         version: 5.1.6
 
-  frontend:
+  apps/frontend:
     dependencies:
       '@types/node':
         specifier: 20.4.5

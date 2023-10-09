@@ -8,8 +8,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "backend": "cd backend && pnpm run start",
-    "frontend": "cd frontend && pnpm run dev",
+    "backend": "cd apps/backend && pnpm run start",
+    "frontend": "cd apps/frontend && pnpm run dev",
     "start": "dotenv -e .env -- npm-run-all -p -r backend frontend"
   },
   "keywords": [],
