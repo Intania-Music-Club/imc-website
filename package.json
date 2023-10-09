@@ -6,15 +6,16 @@
   "name": "imc-website",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "backend": "cd apps/backend && pnpm run start",
     "frontend": "cd apps/frontend && pnpm run dev",
+    "backend:generate": "cd apps/backend && pnpm run prisma:generate",
+    "generate": "dotenv -e .env -- backend:generate",
     "start": "dotenv -e .env -- npm-run-all -p -r backend frontend"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "IMC | Intania Music Club (tech department)",
+  "license": "MIT",
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.8",
     "@changesets/cli": "^2.26.2",
