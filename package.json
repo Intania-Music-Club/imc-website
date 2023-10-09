@@ -1,17 +1,18 @@
 {
-  "private": true,
+  "name": "imc-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "backend": "cd backend && pnpm run start",
+    "frontend": "cd frontend && pnpm run dev",
+    "start": "npm-run-all -p -r backend frontend"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "eslint": "^8.48.0",
-    "prettier": "^3.0.3",
-    "tsconfig": "workspace:*",
-    "turbo": "latest"
-  },
-  "packageManager": "pnpm@8.6.10",
-  "name": "imc-website"
+    "npm-run-all": "^4.1.5"
+  }
 }
